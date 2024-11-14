@@ -33,7 +33,8 @@ public class PolynomialService implements IPolynomialService {
      * @return result of function
      */
     @Override
-    public int solve(String expression, int x) {
+    public int solve(String expression, String argumentValue) {
+        int x = Integer.parseInt(argumentValue);
         return PolynomialHelper.solve(parseToPolynomial(expression), x);
     }
 
@@ -43,9 +44,9 @@ public class PolynomialService implements IPolynomialService {
      * @param expression - string expression to parse
      * @return parsed result
      */
-    private Polynomial parseToPolynomial(String expression){
+    private Polynomial parseToPolynomial(String expression) {
         expression = expression.replaceAll("\\s+", ""); // Remove all whitespace
-        ExpressionWrapper wrapper =new ExpressionWrapper(expression);
+        ExpressionWrapper wrapper = new ExpressionWrapper(expression);
         return ParseHelper.parseExpression(wrapper);
     }
 }

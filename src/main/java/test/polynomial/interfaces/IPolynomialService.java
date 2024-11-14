@@ -14,8 +14,8 @@ public interface IPolynomialService {
     /**
      * Parses given expression and solve it as function
      * @param expression - string expression to parse
-     * @param x - given argument
+     * @param argumentValue - given argument
      * @return result of function
      */
-    public int solve(String expression, int x);
+    public int solve(String expression, String argumentValue);
 }
