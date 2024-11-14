@@ -45,7 +45,7 @@ public class PolynomialService implements IPolynomialService {
      * @return parsed result
      */
     private Polynomial parseToPolynomial(String expression) {
-        expression = expression.replaceAll("\\s+", ""); // Remove all whitespace
+        expression = expression.replaceAll("\\s+", "").replaceAll("−","-"); // Remove all whitespace
         ExpressionWrapper wrapper = new ExpressionWrapper(expression);
         return ParseHelper.parseExpression(wrapper);
     }
