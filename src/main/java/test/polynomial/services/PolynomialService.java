@@ -1,5 +1,6 @@
 package test.polynomial.services;
 
+import org.springframework.stereotype.Service;
 import test.polynomial.helpers.ParseHelper;
 import test.polynomial.helpers.PolynomialHelper;
 import test.polynomial.helpers.StringHelper;
@@ -10,7 +11,8 @@ import test.polynomial.pojo.Polynomial;
 /**
  * Implementation of {@link IPolynomialService}
  */
-public class PolynomialService implements IPolynomialService{
+@Service
+public class PolynomialService implements IPolynomialService {
 
     /**
      * Parses given expression
